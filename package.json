@@ -1,0 +1,64 @@
+{
+  "name": "luniconvert",
+  "version": "0.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "luniconvert",
+    "triples": {
+      "additional": [
+        "aarch64-apple-darwin",
+        "aarch64-linux-android",
+        "aarch64-unknown-linux-gnu",
+        "aarch64-unknown-linux-musl",
+        "aarch64-pc-windows-msvc",
+        "armv7-unknown-linux-gnueabihf",
+        "armv7-unknown-linux-musleabihf",
+        "x86_64-unknown-linux-musl",
+        "x86_64-unknown-freebsd",
+        "i686-pc-windows-msvc",
+        "armv7-linux-androideabi",
+        "universal-apple-darwin",
+        "riscv64gc-unknown-linux-gnu"
+      ]
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.4",
+    "ava": "^6.0.1"
+  },
+  "ava": {
+    "timeout": "3m"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "ava",
+    "universal": "napi universal",
+    "version": "napi version"
+  },
+  "optionalDependencies": {
+    "luniconvert-win32-x64-msvc": "0.0.0",
+    "luniconvert-darwin-x64": "0.0.0",
+    "luniconvert-linux-x64-gnu": "0.0.0",
+    "luniconvert-darwin-arm64": "0.0.0",
+    "luniconvert-android-arm64": "0.0.0",
+    "luniconvert-linux-arm64-gnu": "0.0.0",
+    "luniconvert-linux-arm64-musl": "0.0.0",
+    "luniconvert-win32-arm64-msvc": "0.0.0",
+    "luniconvert-linux-arm-gnueabihf": "0.0.0",
+    "luniconvert-linux-arm-musleabihf": "0.0.0",
+    "luniconvert-linux-x64-musl": "0.0.0",
+    "luniconvert-freebsd-x64": "0.0.0",
+    "luniconvert-win32-ia32-msvc": "0.0.0",
+    "luniconvert-android-arm-eabi": "0.0.0",
+    "luniconvert-darwin-universal": "0.0.0",
+    "luniconvert-linux-riscv64-gnu": "0.0.0"
+  }
+}

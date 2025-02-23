@@ -22,6 +22,13 @@ test('*m to *m', (t) => {
     t.is(converter.convert("1234km to Mm"), "1.23 Mm");
 });
 
+test('weight', (t) => {
+    t.is(converter.convert("1kg to g"), "1000 g");
+    t.is(converter.convert("10g to kg"), "0.01 kg");
+    t.is(converter.convert("1lb to kg"), "0.45 kg");
+    t.is(converter.convert("1oz to g"), "28.35 g");
+});
+
 test('temperatures', (t) => {
     t.is(converter.convert("25C to F"), "77 F");
     t.is(converter.convert("77F to C"), "25 C");

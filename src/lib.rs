@@ -37,6 +37,11 @@ impl Converter {
         conversions.insert("K".to_string(), Conversion { factor: 1.0, offset: -273.15 });
         conversions.insert("F".to_string(), Conversion { factor: 5.0 / 9.0, offset: -32.0 });
 
+        // Weight units (base: gram)
+        conversions.insert("g".to_string(), Conversion { factor: 1.0, offset: 0.0 });
+        conversions.insert("lb".to_string(), Conversion { factor: 453.592, offset: 0.0 });
+        conversions.insert("oz".to_string(), Conversion { factor: 28.3495, offset: 0.0 });
+
         let mut prefixes = HashMap::new();
         prefixes.insert("n".to_string(), 1e-9);    // nano
         prefixes.insert("μ".to_string(), 1e-6);    // micro

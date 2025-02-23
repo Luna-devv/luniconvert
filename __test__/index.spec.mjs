@@ -4,6 +4,8 @@ import { Converter } from '../index.js'
 
 const converter = new Converter();
 
+console.log(converter.convert("10cday to inch"))
+
 test('*m to mile', (t) => {
     t.is(converter.convert("1Mm to mile"), "621.37 mile");
     t.is(converter.convert("10km to mile"), "6.21 mile");

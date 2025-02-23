@@ -42,6 +42,12 @@ impl Converter {
         conversions.insert("lb".to_string(), Conversion { factor: 453.592, offset: 0.0 });
         conversions.insert("oz".to_string(), Conversion { factor: 28.3495, offset: 0.0 });
 
+        // Time units (base: second)
+        conversions.insert("s".to_string(), Conversion { factor: 1.0, offset: 0.0 });
+        conversions.insert("min".to_string(), Conversion { factor: 60.0, offset: 0.0 });
+        conversions.insert("h".to_string(), Conversion { factor: 3600.0, offset: 0.0 });
+        conversions.insert("day".to_string(), Conversion { factor: 86400.0, offset: 0.0 });
+
         let mut prefixes = HashMap::new();
         prefixes.insert("n".to_string(), 1e-9);    // nano
         prefixes.insert("μ".to_string(), 1e-6);    // micro
